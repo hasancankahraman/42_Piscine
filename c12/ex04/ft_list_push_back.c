@@ -37,7 +37,7 @@ void	ft_list_push_back(t_list **begin_list, void *data)
 	last->next = node;
 }
 
-/*
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -67,4 +67,3 @@ int main()
 	last = ft_list_last(node1);
 	printf("%s\n", last->data);
 }
-*/
