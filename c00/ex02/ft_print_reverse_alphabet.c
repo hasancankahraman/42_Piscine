@@ -14,13 +14,13 @@
 
 void	ft_print_alphabet(void)
 {
-	char	say;
+	char	say; // say adında bir integer değişken tanımlandı.
 
-	say	=	97;
-	while (say <= 122)
+	say	=	97; // z harfinin ascii karşılığı
+	while (say <= 122) // a harfinin ascii karşılığı, say değişkeni bu sayıdan büyük veya eşit olduğu müddetçe bu döngüye girilecek
 	{
-		write (1, &say, 1);
-		say--;
+		write (1, &say, 1); // say değişkenini ekrana yazdır
+		say--; // 1 azalt
 	}
 }
 /*
