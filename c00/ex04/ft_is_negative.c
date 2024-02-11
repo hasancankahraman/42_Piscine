@@ -12,12 +12,12 @@
 
 #include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_is_negative(int n) // Fonksiyonumuzda bir int parametresi istiyoruz
 {
-	if (n < 0)
-		write(1, "N", 1);
+	if (n < 0) // İstediğimiz değere sıfırdan küçükse
+		write(1, "N", 1); // Ekrana N harfi yazdır
 	else
-		write(1, "P", 1);
+		write(1, "P", 1); // Ekrana P harfi yazdır
 }
 
 /*int	main(void)
