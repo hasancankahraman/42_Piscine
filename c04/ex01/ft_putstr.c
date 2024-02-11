@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,23 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_putstr(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i])
+	while (str[i])
 	{
+		write (1, &str[i], 1);
 		i++;
 	}
-	return (s1[i] - s2[i]);
 }
 
-int	main()
+int	main(void)
 {
-	printf("%d\n", ft_strcmp("HsanK", "HasanK"));
-	printf("%d\n", ft_strcmp("HasanK", "hasan K"));
-	printf("%d", ft_strcmp("hasanK", "hasanK"));
+	ft_putstr("Hello World!");
 }

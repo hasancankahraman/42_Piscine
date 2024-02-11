@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,21 +12,33 @@
 
 #include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_atoi(char *str)
 {
-	unsigned int	i;
+	int	i;
+	int	s;
+	int	res;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i])
+	s = 1;
+	res = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
+		i++;
+	while (str[i] == '+' || str[i] == '-')
 	{
+		if (str[i] == '-')
+			s = s * -1;
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = (str[i] - 48) + (res * 10);
+		i++;
+	}
+	return (res * s);
 }
 
-int	main()
+int	main(void)
 {
-	printf("%d\n", ft_strcmp("HsanK", "HasanK"));
-	printf("%d\n", ft_strcmp("HasanK", "hasan K"));
-	printf("%d", ft_strcmp("hasanK", "hasanK"));
+	char	*s = "   ---~+--+01234506789ab567";
+	printf("%d", ft_atoi(s));
 }
