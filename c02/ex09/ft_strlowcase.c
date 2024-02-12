@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -52,9 +52,8 @@ char	*ft_strcapitalize(char *str) // Fonksiyonumuzda 1 adet char tipinde paramet
 	}
 	return (str); // str değişkeninin değerini döndürüp ekrana yazdırıyoruz.
 }
-
-int    main()
+/*int    main()
 {
     char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
     printf("%s", ft_strcapitalize(str));
-}
+}*/
