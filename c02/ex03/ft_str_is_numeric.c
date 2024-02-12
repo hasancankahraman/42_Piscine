@@ -31,8 +31,8 @@ int	ft_str_is_numeric(char *str) // Fonksiyonumuzda 1 adet char tipinde parametr
 int	main()
 {
 	printf("%d", ft_str_is_numeric("05092000"));
-	printf("\n%d", ft_str_is_numeric("0509akif2000"));
-	printf("\n%d", ft_str_is_numeric(".(akif05dora_?"));
+	printf("\n%d", ft_str_is_numeric("0509hasan2000"));
+	printf("\n%d", ft_str_is_numeric(".(hasan05kahra_?"));
     printf("\n%d", ft_str_is_numeric(""));
 }
 */
