@@ -27,9 +27,8 @@ char	*ft_strlowcase(char *str) // Fonksiyonumuzda 1 adet char tipinde parametre 
 	}
 	return (str); // str değişkeninin değerini döndürüp ekrana yazdırıyoruz.
 }
-
-int	main()
+/*int	main()
 {
-	char str[] = "AKIFDORA";
+	char str[] = "HASANK";
 	printf("%s", ft_strlowcase(str));
-}
+}*/
