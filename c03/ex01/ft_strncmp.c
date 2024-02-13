@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 11:22:18 by hkahrama          #+#    #+#             */
-/*   Updated: 2024/02/07 11:26:14 by hkahrama         ###   ########.fr       */
+/*   Created: 2024/01/27 11:26:18 by hkahrama          #+#    #+#             */
+/*   Updated: 2024/01/27 11:34:14 by hkahrama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int    ft_strncmp(char *s1, char *s2, unsigned int n)
         i++;
     return (s1[i] - s2[i]);
 }
-
-int	main()
+/*int	main()
 {
 	printf("%d\n", ft_strncmp("HsanK", "HasanK", 5));
 	printf("%d\n", ft_strncmp("HasanK", "hasan K", 5));
@@ -34,4 +33,4 @@ int	main()
 	printf("%d\n", strncmp("HsanK", "HasanK", 5));
 	printf("%d\n", strncmp("HasanK", "hasan K", 5));
 	printf("%d", strncmp("hasanK", "hasanK", 5));
-}
+}*/
