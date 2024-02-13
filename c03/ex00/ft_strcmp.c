@@ -23,10 +23,9 @@ int	ft_strcmp(char *s1, char *s2) // Fonksiyonumuzda 2 adet char tipinde paramet
 	}
 	return (s1[i] - s2[i]); // s1 değişkeninin i değerindeki indeksinden s2 değişkeninin i değerindeki indeksinin ASCII değerlerinin karşılıklarını çıkartıp döndürüyoruz ve ekrana yazdırıyoruz.
 }
-
-int	main()
+/*int	main()
 {
 	printf("%d\n", ft_strcmp("HsanK", "HasanK"));
 	printf("%d\n", ft_strcmp("HasanK", "hasan K"));
 	printf("%d", ft_strcmp("hasanK", "hasanK"));
-}
+}*/
