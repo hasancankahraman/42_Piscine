@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 11:22:18 by hkahrama          #+#    #+#             */
-/*   Updated: 2024/02/07 11:26:14 by hkahrama         ###   ########.fr       */
+/*   Created: 2024/01/28 11:26:22 by hkahrama          #+#    #+#             */
+/*   Updated: 2024/01/28 11:44:53 by hkahrama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_is_prime(int nb)
+int	ft_is_prime(int nb) // Fonksiyonumuzda 1 adet integer tipinde parametre gönderilmesini istiyoruz.
 {
-	int	i;
+	int	i; // i adında integer bir değişken tanımlıyoruz.
 
-	i = 2;
-	if (nb <= 1)
-		return (0);
-	while (i <= (nb / 2))
+	i = 2; // i değişkeninin değerini 2'ye eşitliyoruz
+	if (nb <= 1) // nb değişkeninin değeri 1'den küçükse/eşitse bu koşula giriyoruz.
+		return (0); // 0 döndürüp ekrana yazdırıyoruz.
+	while (i <= (nb / 2)) // i değişkeninin değeri nb değişkeninin değerinin 2'ye bölümünden küçükse/eşitse bu döngüye giriyoruz.
 	{
-		if (!(nb % i))
-			return (0);
+		if (!(nb % i)) // nb değişkeninin değerinin i değişkeninin değerine modundan kalan varsa bu koşula giriyoruz.
+			return (0); // 0 döndürüp ekrana yazdırıyoruz.
 		else
-			i += 1;
+			i += 1; // i'nin değerini 1 arttırıyoruz.
 	}
-	return (1);
+	return (1); // 1 döndürüp ekrana yazdırıyoruz.
 }
 
-int main (void)
+/*int main (void)
 {
 	printf("%d -> %d\n", -3965, ft_is_prime(-3965));
 	printf("%d -> %d\n", -12, ft_is_prime(-12));
@@ -41,4 +41,4 @@ int main (void)
 	printf("%d -> %d\n", 78989, ft_is_prime(78989));
 	printf("%d -> %d\n", 2147483647, ft_is_prime(2147483647));
 	return (0);
-}
+}*/
