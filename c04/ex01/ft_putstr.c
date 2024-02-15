@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 11:22:18 by hkahrama          #+#    #+#             */
-/*   Updated: 2024/02/07 11:26:14 by hkahrama         ###   ########.fr       */
+/*   Created: 2024/01/27 14:22:18 by hkahrama          #+#    #+#             */
+/*   Updated: 2024/01/27 14:26:14 by hkahrama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
-
-int	main(void)
+/*int	main(void)
 {
 	ft_putstr("Hello World!");
-}
+}*/
