@@ -10,35 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 
 int	*ft_range(int min, int max)
 {
 	int	i;
-	int	*result;
+	int	*arr;
 
 	if (min >= max)
-	{
-		return (0);
-	}
-	i = max - min;
-	result = (int *)malloc(sizeof(int) * (i));
-	if (result == NULL)
-	{
 		return (NULL);
-	}
+	arr = (int *)malloc(sizeof(int) * (max - min));
+	if (!arr)
+		return (NULL);
 	i = 0;
-	while (max > min)
+	while (min < max)
 	{
-		result[i] = min;
-		min++;
-		i++;
+		arr[i] = min;
+		++i;
+		++min;
 	}
-	return (result);
+	return (arr);
 }
 
-/*
+
 #include <stdio.h>
 
 int main()
@@ -53,4 +47,3 @@ int main()
 		printf("%d ", arr[i]);
 	printf("\n");
 }
-*/
