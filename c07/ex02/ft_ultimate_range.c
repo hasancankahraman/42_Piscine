@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,33 +10,50 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
 	int	i;
-	int	*result;
+	int	*arr;
 
 	if (min >= max)
 	{
-		*range = NULL;
+		range = NULL;
 		return (0);
 	}
-	i = max - min;
-	result = malloc(sizeof(int) * (i));
-	if (result == NULL)
-	{
-		*range = NULL;
+	arr = (int *)malloc(sizeof(int) * (max - min));
+	if (!arr)
 		return (-1);
-	}
-	*range = result;
 	i = 0;
-	while (max > min)
+	while (min < max)
 	{
-		result[i] = min;
-		min++;
-		i++;
+		arr[i] = min;
+		++i;
+		++min;
 	}
+	*range = arr;
 	return (i);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int len = b - a;
+	
+	int *arr = NULL;
+	int **range = &arr;
+
+	int ret = ft_ultimate_range(range, a, b);
+
+	printf("%d\n\n", ret);
+
+	for (int i = 0; i < len; ++i)
+		printf("%d ", range[0][i]);
+	printf("\n");
+}
+*/
