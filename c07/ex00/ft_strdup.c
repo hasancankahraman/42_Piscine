@@ -10,38 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (str[i] != '\0')
-	{
-		i++;
-	}
+		++i;
 	return (i);
 }
 
 char	*ft_strdup(char *src)
 {
-	int		i;
 	char	*dest;
-	char	*d;
+	int		i;
 
-	i = 0;
-	d = ((dest = (char *)malloc(ft_strlen(src) * sizeof(char) + 1)));
-	if (!d)
-	{
+	i = ft_strlen(src);
+	dest = (char *)malloc(sizeof(char) * (i + 1));
+	if (dest == NULL)
 		return (0);
-	}
-	while (src[i])
-	{
+	i = -1;
+	while (src[++i])
 		dest[i] = src[i];
-		i++;
-	}
 	dest[i] = '\0';
 	return (dest);
 }
