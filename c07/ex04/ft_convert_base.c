@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 11:22:18 by hkahrama          #+#    #+#             */
-/*   Updated: 2024/02/07 11:26:14 by hkahrama         ###   ########.fr       */
+/*   Created: 2024/02/01 15:02:03 by hkahrama          #+#    #+#             */
+/*   Updated: 2024/02/01 15:20:14 by hkahrama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,14 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 int main()
 {
 	printf("%s\n", ft_convert_base("     ---123", "01234", "01"));
-	printf("%s\n", ft_convert_base("2147483647", "0123456789", "0123456789abcdef"));
+	printf("%s\n", ft_convert_base("2147483647", "0123456789", 
+	"0123456789abcdef"));
 	printf("%s\n", ft_convert_base("-2147483648", "0123456789", "012345"));
 	printf("%s\n", ft_convert_base("---7fffffff", "0123456789abcdef", "01"));
-	printf("%s\n", ft_convert_base("---+--0001023a", "0123456789", "0123456789"));
+	printf("%s\n", ft_convert_base("---+--0001023a", "0123456789", 
+	"0123456789"));
 	printf("%s\n", ft_convert_base("-0", "0123456789", "abcdef"));
-	printf("%s\n", ft_convert_base("   \t\t\t\n05841fff4", "0123456789abcdef", "0123"));
+	printf("%s\n", ft_convert_base("   \t\t\t\n05841fff4", 
+	"0123456789abcdef", "0123"));
 }
 */
