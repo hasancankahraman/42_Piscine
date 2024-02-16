@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 11:22:18 by hkahrama          #+#    #+#             */
-/*   Updated: 2024/02/07 11:26:14 by hkahrama         ###   ########.fr       */
+/*   Created: 2024/02/01 13:40:18 by hkahrama          #+#    #+#             */
+/*   Updated: 2024/02/01 13:55:14 by hkahrama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,20 @@ int	*ft_range(int min, int max)
 	}
 	return (result);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int len = b - a;
+
+	int *arr = ft_range(a, b);
+
+	for (int i = 0; i < len; ++i)
+		printf("%d ", arr[i]);
+	printf("\n");
+}
+*/
