@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 11:22:18 by hkahrama          #+#    #+#             */
-/*   Updated: 2024/02/07 11:26:14 by hkahrama         ###   ########.fr       */
+/*   Created: 2024/02/13 16:58:21 by hkahrama          #+#    #+#             */
+/*   Updated: 2024/02/13 17:15:55 by hkahrama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_list_push_back(t_list **begin_list, void *data)
 	last->next = node;
 }
 
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -67,3 +67,4 @@ int main()
 	last = ft_list_last(node1);
 	printf("%s\n", last->data);
 }
+*/
