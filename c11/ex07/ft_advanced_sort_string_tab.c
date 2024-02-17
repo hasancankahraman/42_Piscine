@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkahrama <hkahrama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 13:11:18 by hkahrama          #+#    #+#             */
-/*   Updated: 2024/02/12 13:59:14 by hkahrama         ###   ########.fr       */
+/*   Created: 2024/02/13 13:11:18 by hkahrama          #+#    #+#             */
+/*   Updated: 2024/02/13 13:59:14 by hkahrama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,7 @@ void	swap(int j, char **tab)
 	tab[j + 1] = tmp;
 }
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	while (*s1 != '\0' && *s2 != '\0')
-	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		++s1;
-		++s2;
-	}
-	if (*s1 != *s2)
-		return (*s1 - *s2);
-	return (0);
-}
-
-void	ft_sort_string_tab(char **tab)
+void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 {
 	int		i;
 	int		j;
@@ -43,7 +29,7 @@ void	ft_sort_string_tab(char **tab)
 
 	i = -1;
 	len = 0;
-	if (!tab)
+	if (!tab || !cmp)
 		return ;
 	while (tab[len])
 		++len;
@@ -54,7 +40,7 @@ void	ft_sort_string_tab(char **tab)
 		{
 			str1 = tab[j];
 			str2 = tab[j + 1];
-			if (ft_strcmp(str1, str2) > 0)
+			if (cmp(str1, str2) > 0)
 				swap(j, tab);
 		}
 	}
@@ -80,9 +66,23 @@ void	display_sorted_args(int argc, char **argv)
 	}
 }
 
+int	ft_strcmp(char *s1, char *s2)
+{
+	while (*s1 != '\0' && *s2 != '\0')
+	{
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		++s1;
+		++s2;
+	}	
+	if (*s1 != *s2)
+		return (*s1 - *s2);
+	return (0);
+}
+
 int main(int argc, char **argv)
 {
-	ft_sort_string_tab(argv);
+	ft_advanced_sort_string_tab(argv, &ft_strcmp);
 	display_sorted_args(argc, argv);
 }
 */
